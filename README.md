@@ -5,7 +5,7 @@ Det ni ska skapa är en e-handel sida som presenterar ett antal olika produkter.
 
 Krav för godkänt:
 
-1.Git & GitHub har använts ✅
+1.Git & GitHub har använts  ✅
 
 2.Projektmappen innehåller en README.md fil - (läs ovan för mer info)✅
 
