@@ -5,18 +5,18 @@ Det ni ska skapa är en e-handel sida som presenterar ett antal olika produkter.
 
 Krav för godkänt:
 
-1.Git & GitHub har använts  ✅
+1.Git & GitHub har använts (G) ✅
 
-2.Projektmappen innehåller en README.md fil - (läs ovan för mer info)✅
+2.Projektmappen innehåller en README.md fil - (läs ovan för mer info) (G) ✅
 
-3.Uppgiften lämnas in innan deadline!✅
+3.Uppgiften lämnas in innan deadline! (G) ✅
 
-4.Ett designsystem används✅
+4.Ett designsystem används (G) ✅
 
-5.React Router skall användas som navigation. Exempelvis så skall produkten som visas på produktsidan ska baseras på en parameter i url’en.✅
+5.React Router skall användas som navigation. Exempelvis så skall produkten som visas på produktsidan ska baseras på en parameter i url’en. (G) ✅
 
-6.React context skall användas för hantering av kundvagnen.✅
+6.React context skall användas för hantering av kundvagnen.(G) ✅
 
-7.Samtliga fält ska ha valideringsregler (tips, se Material UI:s dokumentation)✅
+7.Samtliga fält ska ha valideringsregler (tips, se Material UI:s dokumentation) (G) ✅
 
-8.Sidan ska vara fullt responsiv9.Mockade produkter ska ligga i en egen fil och vara typade med ett TS interface✅
+8.Sidan ska vara fullt responsiv9.Mockade produkter ska ligga i en egen fil och vara typade med ett TS interface (G) ✅
