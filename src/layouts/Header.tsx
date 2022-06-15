@@ -33,7 +33,7 @@ const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
   },
 }))
 
-const pages = ['Home', 'Products', 'Checkout'];
+const pages = ['Home', 'Products', 'Checkout', 'result'];
 const settings = ['Admin Panel'];
 
 const ResponsiveAppBar = () => {
@@ -77,7 +77,7 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-           Snow white
+            LOGO
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -133,7 +133,7 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-            Snow white
+            LOGO
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -165,6 +165,16 @@ const ResponsiveAppBar = () => {
 
               >
                 Checkout
+              </Button>
+            </Link>
+            <Link to="/result">
+              <Button
+                key="result"
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+
+              >
+                result
               </Button>
             </Link>
 

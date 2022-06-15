@@ -13,20 +13,20 @@ const PaymentMethods: PaymentMethods[] = [
         id: 1,
         title: "Bank Transfer",
         description: "Bank Transfer",
-        image: ""
+        image: MasterCard
     },
     {
         id: 2,
-        title: "Swish",
-        description: "Swish",
-        image: ""
+        title: "Master Card",
+        description: "Master Card",
+        image: MasterCard
     },
     {
-        id: 2,
-        title: "Bank Transfer",
-        description: "Bank Transfer",
-        image: ""
-    }
+        id: 3,
+        title: "Visa Card",
+        description: "Visa Card",
+        image: MasterCard
+    },
 ]
 export default PaymentMethods
 

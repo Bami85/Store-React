@@ -6,7 +6,8 @@ export interface Shipping {
     title: string,
     description: string,
     image: string,
-    price: number
+    price: number,
+    selected: string,
 }
 // Data
 const shippings: Shipping[] = [
@@ -15,21 +16,17 @@ const shippings: Shipping[] = [
         title: "DHL",
         description: "1-5 Days",
         image: DHL,
-        price: 40
+        price: 150,
+        selected: 'selected'
     },
     {
         id: 2,
-        title: "Postnord",
-        description: "3-10 Days",
-        image: "",
-        price: 10
-    },{
-        id: 3,
-        title: "Bring",
-        description: "3-8 Days",
-        image: "",
-        price: 10
-    }
+        title: "Test2",
+        description: "10-50 Days",
+        image: DHL,
+        price: 20,
+        selected: ''
+    },
 ]
 export default shippings
 

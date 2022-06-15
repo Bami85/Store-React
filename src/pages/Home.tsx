@@ -28,7 +28,7 @@ function Home() {
         </Grid>
         <Grid item xs={12} sm={8} >
           <div style={{textAlign: "center", margin: '30px'}}>
-           
+            <small>About Us</small>
             <h1 style={{fontFamily: "Arial, Helvetica, sans-serif", fontSize: "5rem"}}>Snow White</h1>
             <p>We're honored to have earned the trust of hundreds of thousands of over 2,000,000 happy customers (and growing) who chose Snow White to celebrate their engagements, once-in-a lifetime occasions, milestone moments and personal achievements with close to 5,000,000 unique pieces of jewelry. From the first sketch to the final touch, every piece Jewelry is proudly designed and handmade. Each piece you purchase supports our team of artisans who love making jewelry. We only use tarnish-resistant skin-friendly metals, and handpick every gemstone for quality, so you can wear your pieces everyday without worrying about fading colors!</p>
           </div>

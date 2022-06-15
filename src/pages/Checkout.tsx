@@ -30,27 +30,37 @@ const Fields = ['fullname', 'email', 'mobile', 'address'];
 function Checkout(props) {
     const [cartItems, setCartItems] = useContext(CartContext);
     const [checkoutItems, setCheckoutItems] = useContext(CheckoutContext);
-
+    console.log(checkoutItems)
     const placeOrder = () => {
         console.log('ordered!')
     }
-    const billing_info = () => {
+    const billing_info = (event) => {
         //console.log(checkoutItems)
         //checkoutItems[event.target.name] = event.target.value
-        const product = {
-            id: 1,
-            image: ' props.image[0]',
-            title: ' props.title',
-            quantity: 1,
-            price: 878
+        switch(event.target.name){
+            case 'fullname':
+                console.log('Fullname Input')
+                setCheckoutItems({...checkoutItems,fullname:event.target.value})
+            break;
+            case 'email':
+                console.log('email Input')
+                setCheckoutItems({...checkoutItems,email:event.target.value})
+            break;
+            case 'mobile':
+                console.log('mobile Input')
+                setCheckoutItems({...checkoutItems,mobile:event.target.value})
+            break;
+            case 'address':
+                console.log('address Input')
+                setCheckoutItems({...checkoutItems,address:event.target.value})
+            break;
         }
-        setCartItems((currentState) => {
-            return [...currentState, product]
-        })
+        console.log(checkoutItems)
+        
     }
     const place_order = (event) => {
         event.preventDefault()
-        console.log('orderedddd')
+        console.log(event.target.elements.cardNumber.value)
     }
 
     return (
