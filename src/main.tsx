@@ -1,13 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Header from './layouts/Header'
-import Footer from './layouts/Footer'
+import { BrowserRouter } from "react-router-dom";
+import { CartProvider } from './context/cart-context';
+import { CheckoutProvider } from './context/checkout-context';
+import { CartContext } from './context/cart-context';
+import App from './App'
+import Footer from './layouts/footer'
+import Header from './layouts/header'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
- <div>
-    <Header />
-   
-    <Footer />
- </div>
+  <React.StrictMode>
+    <BrowserRouter>
+      <CheckoutProvider>
+        <CartProvider>
+          <Header />
+          <App />
+          <Footer />
+        </CartProvider>
+      </CheckoutProvider>
+    </BrowserRouter>
+  </React.StrictMode>
 )
