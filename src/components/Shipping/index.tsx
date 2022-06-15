@@ -10,8 +10,8 @@ function ShippingForm() {
     
     return (
         <div>
-            <h2>Shipping</h2>
-            <select name="shippingMethods"  required>
+            <h2 align="left">Shipping</h2>
+            <select name="shippingMethods"  >
                 <option selected disabled>Select a Method</option>
                 {
                     shippingMethods.map((item,indx) => {
@@ -21,7 +21,6 @@ function ShippingForm() {
                         title={item.title}
                         description={item.description}
                         price={item.price}
-                        select={item.selected}
                         />
                     })
                 }

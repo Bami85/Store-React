@@ -9,7 +9,7 @@ const ShippingItem = (props) => {
         setCheckoutItems({...checkoutItems,shipping:props})
     }
     return (
-        <option  value={props.index} onClick={changeShipping}>{props.title}</option>
+        <option value={props.index} onClick={changeShipping}>{props.title}</option>
     )
 }
 export default ShippingItem
