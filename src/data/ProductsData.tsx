@@ -2,20 +2,21 @@ import product1_1 from '../assets/image/product1-1.jpeg'
 import product1_2 from '../assets/image/product1-2.jpeg'
 import product1_3 from '../assets/image/product1-3.jpeg'
 
-import product3_1 from '../assets/image/product3-3.jpeg'
-import product3_2 from '../assets/image/product3-2.jpeg'
-import product3_3 from '../assets/image/product3-1.jpeg'
-
-import product2_1 from '../assets/image/product2-2.jpeg'
-import product2_2 from '../assets/image/product2-1.jpeg'
+import product2_1 from '../assets/image/product2-1.jpeg'
+import product2_2 from '../assets/image/product2-2.jpeg'
 import product2_3 from '../assets/image/product2-3.jpeg'
+
+import product3_1 from '../assets/image/product3-1.jpeg'
+import product3_2 from '../assets/image/product3-2.jpeg'
+import product3_3 from '../assets/image/product3-3.jpeg'
 
 import product4_1 from '../assets/image/product4-1.jpeg'
 import product4_2 from '../assets/image/product4-2.jpeg'
 import product4_3 from '../assets/image/product4-3.jpeg'
 
-
-
+import pic2 from '../assets/image/img2.jpeg'
+import pic3 from '../assets/image/img3.jpeg'
+import pic4 from '../assets/image/img4.jpeg'
 
 
 export interface Product {
@@ -34,7 +35,7 @@ export interface Product {
 const products: Product[] = [
     {
         id: 1,
-        title: "TREASURE SHIMMER",
+        title: "TREASURE SHIMMER BRACELET GOLD ",
         slug: "treasure-shimmer",
         description: "Neat bracelet with three white, facetted zircons. Made of sterling silver, plated with 18K gold. Feel free to combine it with other jewelry from the same collection.",
         image: [
@@ -45,8 +46,8 @@ const products: Product[] = [
         price: 599,
         discountPrice: 499,
     }, {
-        id: 2,
-        title: "Petite Shared Prong",
+        id: 8,
+        title: "Petite Shared Prong Diamond Engagement Ring",
         slug: "petite",
         description: "This dainty ring features sheer sparkle that extends halfway around the ring. The center gem appears to float above the delicate band (1/4 total carat weight).",
         image: [
@@ -57,8 +58,8 @@ const products: Product[] = [
         price: 1150,
         discountPrice: 900,
     }, {
-        id: 3,
-        title: "Viromy Dainty Cubic Zirconia ",
+        id: 14,
+        title: "Viromy Dainty Cubic Zirconia Necklaces",
         slug: "viromy-dainty",
         description: "Viromy gold CZ necklaces for women are made of hypoallergenic material and 14k gold plated material making this a great choice for those with very sensitive skin.Never tarnish and break. This simple cute necklace for women is made to last and we didn’t compromise on quality for looks. In addition, it’s sturdy and can hold up pretty well with a strong lobster claw clasp that provides security.",
         image: [
@@ -69,7 +70,7 @@ const products: Product[] = [
         price: 899,
         discountPrice: 600,
     }, {
-        id: 4,
+        id: 20,
         title: "SWAROVSKI DAMEN",
         slug: "swarovski-damen",
         description: "By its very nature eternal love must have a past, a present, and a future, and this pair of stunning pierced earrings has been conceived with that romantic concept in mind. A trio of clear crystals are embellished with pavé and rhodium plating in this scintillating design. Timelessly elegant, they will be a treasured keepsake. A matching necklace and ring are available.",

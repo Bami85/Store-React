@@ -5,6 +5,7 @@ import Checkout from './pages/Checkout'
 import CartList from './pages/CartList'
 import ProductList from './pages/products/index'
 import ProductShow from './pages/products/show'
+import ResultPage from "./pages/result";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="products/show/" element={<ProductShow />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="cart" element={<CartList />} />
+        <Route path="result" element={<ResultPage />} />
       </Routes>
     </div>
   );

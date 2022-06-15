@@ -3,10 +3,16 @@ export const CheckoutContext = createContext([]);
 // Providers
 export const CheckoutProvider = (props) => {
     const [checkoutItems,setCheckoutItems] = useState({
+        fullname : '',
+        email : '',
+        mobile : '',
+        address : '',
         total_amount : 0,
         shipping : {},
         onlinePayment : true,
-        payment : {},
+        paymentMethod : {},
+        onlinePaymentMethod : {},
+        offlinePaymentMethod : {},
     })
     return (
         <CheckoutContext.Provider
