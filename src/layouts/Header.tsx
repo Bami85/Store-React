@@ -1,4 +1,7 @@
-import * as React from 'react';
+import React, { useContext } from "react";
+import { CartContext } from "../context/cart-context";
+import CartItem from "../components/CartItem";
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,11 +16,29 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Routes, Route, Link } from "react-router-dom";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Badge, { BadgeProps } from '@mui/material/Badge';
+import { styled } from '@mui/material/styles';
+// Cart Count
+
+
+
+
+const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
+  '& .MuiBadge-badge': {
+    right: -3,
+    top: 13,
+    border: `2px solid ${theme.palette.background.paper}`,
+    padding: '0 4px',
+  },
+}))
 
 const pages = ['Home', 'Products', 'Checkout'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Admin Panel'];
 
 const ResponsiveAppBar = () => {
+  const [cartItems, setCartItems] = useContext(CartContext);
+
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -56,7 +77,7 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+           Snow white
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -112,55 +133,60 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Snow white
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Link to={page}>
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
-                  
-                >
-                  {page}
-                </Button>
-              </Link>
-              
-            ))}
+            <Link to="/">
+              <Button
+                key="home"
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+
+              >
+                Home
+              </Button>
+            </Link>
+            <Link to="/products">
+              <Button
+                key="home"
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+
+              >
+                Products
+              </Button>
+            </Link>
+            <Link to="/checkout">
+              <Button
+                key="home"
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+
+              >
+                Checkout
+              </Button>
+            </Link>
+
+
+
+          </Box>
+          <Box sx={{ flexGrow: 0 }}>
+            <Link to="/cart">
+              <Button
+                key={2}
+
+              >
+                <IconButton aria-label="cart">
+                  <StyledBadge badgeContent={cartItems.length} color="secondary">
+                    <ShoppingCartIcon />
+                  </StyledBadge>
+                </IconButton>
+              </Button>
+            </Link>
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          
+
         </Toolbar>
       </Container>
     </AppBar>
